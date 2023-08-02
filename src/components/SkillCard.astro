@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  htmlString: string;
+}
+
+const { title, htmlString } = Astro.props;
+---
+
+<div>
+  <Fragment set:html={htmlString} />
+  <span>{title}</span>
+</div>
+
+<style>
+  div {
+    border-radius: 2rem;
+    border: 1px solid #fafafa;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 0.5rem;
+  }
+  span {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+</style>
