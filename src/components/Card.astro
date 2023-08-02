@@ -1,61 +1,86 @@
 ---
+import Badge from "./Badge.astro";
+
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+  time: string;
+  position: string;
+  company: string;
+  companyPage: string;
+  description: string;
+  skills: string[];
 }
 
-const { href, title, body } = Astro.props;
+const { time, position, company, companyPage, description, skills } =
+  Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
+<li class="card">
+  <div class="timeline">
+    <div class="circle"></div>
+    <div class="line"></div>
+  </div>
+  <div class="content">
+    <span class="time">{time}</span>
+    <h3>
+      {position} - <a href={companyPage} target="_blank">{company}</a>
+    </h3>
+    <p>{description}</p>
+    <div class="skills">
+      {skills.map((skill) => <Badge name={skill} />)}
+    </div>
+  </div>
 </li>
+
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
+  .card {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .card:hover .timeline,
+  .card:hover .time {
+    color: #3498db;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s;
+  }
+
+  .time {
+    transition: color 0.2s;
+  }
+
+  .circle {
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    border-radius: 50%;
+  }
+
+  .line {
+    border-left: 1px solid #fff;
+    flex: 1;
+  }
+
+  .content {
+    padding: 0 1rem 1rem 1rem;
+  }
+  h3 span {
+    color: #fff;
+  }
+  a,
+  a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 </style>

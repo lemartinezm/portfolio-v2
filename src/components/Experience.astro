@@ -1,0 +1,33 @@
+---
+import Card from "./Card.astro";
+import { getCollection } from "astro:content";
+const experiences = await getCollection("experience");
+const formatedExperiences = experiences.sort(
+  (a, b) => Number(b.id) - Number(a.id)
+);
+---
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ul>
+    {formatedExperiences.map((experience) => <Card {...experience.data} />)}
+  </ul>
+</section>
+
+<style>
+  * {
+    margin: 0;
+  }
+
+  section {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  ul {
+    padding: 0;
+  }
+</style>
