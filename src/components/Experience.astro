@@ -1,5 +1,5 @@
 ---
-import Card from "./Card.astro";
+import ExperienceCard from "./ExperienceCard.astro";
 import { getCollection } from "astro:content";
 const experiences = await getCollection("experience");
 const formatedExperiences = experiences.sort(
@@ -10,7 +10,11 @@ const formatedExperiences = experiences.sort(
 <section id="experience">
   <h2>Experience</h2>
   <ul>
-    {formatedExperiences.map((experience) => <Card {...experience.data} />)}
+    {
+      formatedExperiences.map((experience) => (
+        <ExperienceCard {...experience.data} />
+      ))
+    }
   </ul>
 </section>
 
