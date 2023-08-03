@@ -33,7 +33,14 @@ import Projects from "../components/Projects.astro";
     background-color: #0c0f14;
     color: #fff;
   }
-  section {
-    height: 600px;
+
+  main {
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    main {
+      padding: 0 4rem;
+    }
   }
 </style>
