@@ -1,5 +1,47 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import image6 from "../assets/image6.webp";
+const projects = [
+  {
+    image: image6,
+    imageAlt: "Project image",
+    title: "Project title",
+    description: "Project description",
+    techs: ["React", "Next.js", "Express"],
+    projectLink: "https://localhost:3000",
+  },
+  {
+    image: image6,
+    imageAlt: "Project image",
+    title: "Project title",
+    description: "Project description",
+    techs: ["React", "Next.js", "Express"],
+    projectLink: "https://localhost:3000",
+  },
+  {
+    image: image6,
+    imageAlt: "Project image",
+    title: "Project title",
+    description: "Project description",
+    techs: ["React", "Next.js", "Express"],
+    projectLink: "https://localhost:3000",
+  },
+  {
+    image: image6,
+    imageAlt: "Project image",
+    title: "Project title",
+    description: "Project description",
+    techs: ["React", "Next.js", "Express"],
+    projectLink: "https://localhost:3000",
+  },
+];
+---
+
 <section id="projects">
   <h2>Projects</h2>
+  <div>
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </div>
 </section>
 
 <style>
@@ -12,6 +54,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1rem;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1rem;
   }
 </style>

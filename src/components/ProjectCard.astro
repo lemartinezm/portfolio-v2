@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import Badge from "./Badge.astro";
+
+interface Props {
+  image: any;
+  imageAlt: string;
+  title: string;
+  description: string;
+  techs: string[];
+  projectLink: string;
+}
+
+const { image, description, imageAlt, projectLink, techs, title } = Astro.props;
+---
+
+<li>
+  <a href={projectLink}>
+    <Image src={image} alt="Project image" />
+    <div class="container">
+      <h3>{title}</h3>
+      <div class="techs">
+        {techs.map((tech) => <Badge name={tech} />)}
+      </div>
+      <p>{description}</p>
+    </div>
+  </a>
+</li>
+
+<style>
+  * {
+    margin: 0;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  li {
+    overflow: hidden;
+    list-style-type: none;
+    border: 1px solid #fafafa;
+    border-radius: 0.75rem;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 14rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+</style>
