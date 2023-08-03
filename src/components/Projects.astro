@@ -39,9 +39,9 @@ const projects = [
 
 <section id="projects">
   <h2>Projects</h2>
-  <div>
+  <ul>
     {projects.map((project) => <ProjectCard {...project} />)}
-  </div>
+  </ul>
 </section>
 
 <style>
@@ -57,9 +57,10 @@ const projects = [
     gap: 1rem;
   }
 
-  div {
+  ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1rem;
+    padding: 0;
   }
 </style>
