@@ -3,6 +3,6 @@
   "position": "Junior Full Stack Developer",
   "company": "REWORTH",
   "companyPage": "https://reworth.co",
-  "description": "This is a description of what i do in my time working for reworth",
+  "description": "Developed an internal administration web application and implemented new functionalities to the company's API following the established requirements.",
   "skills": ["React", "Next.js", "Node", "Express.js", "NestJS", "MongoDB"]
 }
