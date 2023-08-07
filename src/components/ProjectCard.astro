@@ -15,7 +15,7 @@ const { image, description, imageAlt, projectLink, techs, title } = Astro.props;
 ---
 
 <li>
-  <a href={projectLink}>
+  <a href={projectLink} target="_blank">
     <Image src={image} alt="Project image" />
     <div class="container">
       <h3>{title}</h3>
@@ -44,7 +44,6 @@ const { image, description, imageAlt, projectLink, techs, title } = Astro.props;
     transition: all 0.2s;
     background: rgba(52, 152, 219, 0);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.6px);
     -webkit-backdrop-filter: blur(7.6px);
     border: 1px solid rgba(52, 152, 219, 0.07);
   }

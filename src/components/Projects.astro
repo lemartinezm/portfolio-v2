@@ -1,38 +1,35 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 import image6 from "../assets/image6.webp";
+import zentia from "../assets/zentia.webp";
+import devblog from "../assets/devblog.webp";
 const projects = [
   {
-    image: image6,
-    imageAlt: "Project image",
-    title: "Project title",
-    description: "Project description",
-    techs: ["React", "Next.js", "Express"],
-    projectLink: "https://localhost:3000",
+    image: zentia,
+    imageAlt: "Zentia Store project image",
+    title: "Zentia Store",
+    description:
+      "Site created for an e-commerce. It uses headless Wordpress and WooCommerce to manage orders and products.",
+    techs: ["WIP", "React", "Next.js", "Tailwind", "API"],
+    projectLink: "https://zentia-store.vercel.app/",
   },
   {
     image: image6,
-    imageAlt: "Project image",
-    title: "Project title",
-    description: "Project description",
-    techs: ["React", "Next.js", "Express"],
-    projectLink: "https://localhost:3000",
+    imageAlt: "News App project image",
+    title: "News App",
+    description:
+      "Team developed application. It consumes an API created for the project and displays the most relevant news of the different categories.",
+    techs: ["React", "Tailwind", "Express", "MongoDB", "API"],
+    projectLink: "https://news-app-seven-iota.vercel.app/",
   },
   {
-    image: image6,
-    imageAlt: "Project image",
-    title: "Project title",
-    description: "Project description",
-    techs: ["React", "Next.js", "Express"],
-    projectLink: "https://localhost:3000",
-  },
-  {
-    image: image6,
-    imageAlt: "Project image",
-    title: "Project title",
-    description: "Project description",
-    techs: ["React", "Next.js", "Express"],
-    projectLink: "https://localhost:3000",
+    image: devblog,
+    imageAlt: "DevBlog project image",
+    title: "DevBlog",
+    description:
+      "Team developed application. Blog template developed with React. It uses Markdown to render the content of the articles.",
+    techs: ["React", "Tailwind"],
+    projectLink: "https://dev-blog-mu.vercel.app/",
   },
 ];
 ---
