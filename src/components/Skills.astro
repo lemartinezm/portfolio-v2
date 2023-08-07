@@ -108,7 +108,7 @@ const skills = [
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   p {
@@ -121,5 +121,11 @@ const skills = [
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: 1rem;
     box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3rem;
+    }
   }
 </style>
