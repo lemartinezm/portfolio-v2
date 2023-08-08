@@ -16,6 +16,8 @@ const formatedExperiences = experiences.sort(
       ))
     }
   </ul>
+
+  <a href="/luis_martinez_full_stack_developer.pdf">View full resume</a>
 </section>
 
 <style>
@@ -42,6 +44,27 @@ const formatedExperiences = experiences.sort(
 
   ul {
     padding: 0;
+  }
+
+  a {
+    background-color: #3498db;
+    width: fit-content;
+    padding: 1rem 2rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 1.5rem;
+    font-size: 1.125rem;
+    transition: 0.2s opacity;
+  }
+  a:visited {
+    color: #000;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    opacity: 0.8;
   }
 
   @media (min-width: 768px) {
