@@ -15,8 +15,8 @@ const { image, description, imageAlt, projectLink, techs, title } = Astro.props;
 ---
 
 <li>
-  <a href={projectLink} target="_blank">
-    <Image src={image} alt="Project image" />
+  <a href={projectLink} target="_blank" rel="noopener noreferrer">
+    <Image src={image} alt={imageAlt} />
     <div class="container">
       <h3>{title}</h3>
       <div class="techs">

@@ -22,7 +22,13 @@ const { time, position, company, companyPage, description, skills } =
   <div class="content">
     <span class="time">{time}</span>
     <h3>
-      {position} - <a href={companyPage} target="_blank">{company}</a>
+      {position} - <a
+        href={companyPage}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {company}
+      </a>
     </h3>
     <p>{description}</p>
     <div class="skills">
