@@ -1,54 +1,61 @@
-# Astro Starter Kit: Basics
+# My Portfolio
 
-```
-npm create astro@latest -- --template basics
-```
+Welcome to my developer portfolio! Here you'll find a showcase of my projects and skills in the realm of web development.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Preview
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Preview](/public/portfolio.png)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Project Description
 
-## 🚀 Project Structure
+This portfolio was built using Astro, an exciting tool that enables creating fast and modern websites. My aim was to display my expertise and projects in an engaging and user-friendly manner.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Technologies Used
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Astro
+- CSS
+- HTML
+- TypeScript
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Featured Projects
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Project 1: E-Commerce Website
 
-Any static assets, like images, can be placed in the `public/` directory.
+Site created for an e-commerce. It uses headless Wordpress and WooCommerce to manage orders and products.
 
-## 🧞 Commands
+### Project 2: News App
 
-All commands are run from the root of the project, from a terminal:
+Team developed application. It consumes an API created for the project and displays the most relevant news of the different categories.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Project 3: DevBlog
 
-## 👀 Want to learn more?
+Team developed application. Blog template developed with React. It uses Markdown to render the content of the articles.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Installation and Usage
+
+1. Clone this repository:
+
+   ```
+   git clone https://github.com/lemartinezm/portfolio-v2
+   ```
+
+2. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+3. Run the project in development mode:
+
+   ```
+   npm run dev
+   ```
+
+## Contact
+
+- Email: lemartinezmendoza@gmail.com
+- LinkedIn: [lemartinezm](https://www.linkedin.com/in/lemartinezm/)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
