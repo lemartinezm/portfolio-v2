@@ -1,35 +1,36 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
-import image6 from "../assets/image6.webp";
 import zentia from "../assets/zentia.webp";
-import devblog from "../assets/devblog.webp";
+import timeless from "../assets/timeless-desktop.png";
+import planetx from "../assets/planetx.png";
 const projects = [
+  {
+    image: planetx,
+    imageAlt: "PlanetX Adventures project image",
+    title: "PlanetX Adventures",
+    description:
+      'Landing page showcasing "PlanetX Adventures", a fictional company specializing in interplanetary camps. Stay tuned for upcoming features, including reservation capabilities and boarding ticket issuance.',
+    techs: ["WIP", "Astro", "React", "API", "NestJS", "MySQL"],
+    projectLink: "https://planetx-adventures.vercel.app/",
+  },
+
+  {
+    image: timeless,
+    imageAlt: "Timeless Brews project image",
+    title: "Timeless Brews",
+    description:
+      'Landing page highlighting "Timeless Brews", an imaginary beer brand that seamlessly combines tradition with a contemporary flair. Dive into the fusion of classic and modern brewing on our platform!',
+    techs: ["HTML", "CSS", "React", "Vite", "IA Images"],
+    projectLink: "https://timeless-brews.vercel.app/",
+  },
   {
     image: zentia,
     imageAlt: "Zentia Store project image",
     title: "Zentia Store",
     description:
-      "Site created for an e-commerce. It uses headless Wordpress and WooCommerce to manage orders and products.",
-    techs: ["WIP", "React", "Next.js", "Tailwind", "API"],
+      "Crafted an e-commerce website leveraging headless WordPress and WooCommerce for streamlined order and product management. Explore seamless online shopping experiences with our cutting-edge platform.",
+    techs: ["React", "Next.js", "Tailwind", "API", "WooCommerce"],
     projectLink: "https://zentia-store.vercel.app/",
-  },
-  {
-    image: image6,
-    imageAlt: "News App project image",
-    title: "News App",
-    description:
-      "Team developed application. It consumes an API created for the project and displays the most relevant news of the different categories.",
-    techs: ["React", "Tailwind", "Express", "MongoDB", "API"],
-    projectLink: "https://news-app-seven-iota.vercel.app/",
-  },
-  {
-    image: devblog,
-    imageAlt: "DevBlog project image",
-    title: "DevBlog",
-    description:
-      "Team developed application. Blog template developed with React. It uses Markdown to render the content of the articles.",
-    techs: ["React", "Tailwind"],
-    projectLink: "https://dev-blog-mu.vercel.app/",
   },
 ];
 ---
